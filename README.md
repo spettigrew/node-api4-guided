@@ -4,3 +4,8 @@
 </div>
 
 # Web Deployment and Best Practices Guided Project
+
+### Getting Started
+
+- Create a [Heroku](https://www.heroku.com) account
+- Clone this repo and run `npm install`
