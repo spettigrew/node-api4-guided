@@ -5,8 +5,8 @@ const express = require("express")
 // setup in the index.js under 'scripts'
 
 const app = express()
-const host = "127.0.0.1"
-const port = 8080
+const host = process.env.HOST || "127.0.0.1" // || = 'or'
+const port = process.env.PORT || 8080
 
 app.use((req, res, next) => {
 	console.log(`[${new Date().toLocaleString()}] ${req.ip} ${req.method} ${req.url}`)
