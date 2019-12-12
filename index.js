@@ -9,7 +9,7 @@ const host = process.env.HOST || "127.0.0.1" // || = 'or'
 const port = process.env.PORT || 8080
 
 app.use((req, res, next) => {
-	const actualIp = req.get('x-forwarded-for') || 
+	const actualIp = req.get('x-forwarded-for') || req.ip
 	console.log(`[${new Date().toLocaleString()}] ${req.ip} ${req.method} ${req.url}`)
 	next()
 })
